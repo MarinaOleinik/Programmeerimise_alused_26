@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>f22934f3-5fcb-41bd-a2e6-ecd32f8c23f9</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>Programmeerimise_alused_26.py</StartupFile>
+    <StartupFile>Too_1_1.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -22,6 +22,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Programmeerimise_alused_26.py" />
+    <Compile Include="Too_1_1.py" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in

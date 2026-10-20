@@ -5,9 +5,9 @@ import math
 print("Tere tulemast! Üks hetk, palun...") #kommentaar
 print("Esimene programm, mis on kirjutatud Pythonis.") #sep=" ",end="\n" vaikimisi väärtusi kasutatakse
 # #muutujad
-# kursus=2 #int
+kursus=2 #int
 # print("Ma õpin",1,".kursusel") #sep=" ",end="\n"
-# print("Ma õpin",kursus,".kursusel",sep="***",end=". ")
+print("Ma õpin",kursus,".kursusel",sep="***",end=". ")
 # kursus=int(input("Aga sina?")) # str->int
 # print("Tore! Sa õpid",kursus,".kursusel. Aga järgmisel aastal",kursus+1,"kursusel")
 # nimi = input("Mis on sinu nimi? ")
@@ -55,7 +55,7 @@ vanus = 17
 print("Vanus: " + str(vanus))
 
 
-# math mooduli kasutamine
+# math mooduli kasutamine ....
 print("Pii väärtus:", math.pi)
 print("√16 =", math.sqrt(16))
 print("sin(π/2) =", math.sin(math.pi / 2))
