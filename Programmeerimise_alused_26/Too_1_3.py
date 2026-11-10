@@ -70,9 +70,40 @@ try:
     R= float(input("Sisesta ringi raadius: "))
     print("Ruudu pindala:", R**2)
     print("Ruudu ümbermõõt:", 4*R)
-    print("Ringi pindala:", pi*R**2)
+    print("Ringi pindala:", round(pi*R**2, 2))
     print("Ringi ümbermõõt:", 2*pi*R)
 except :
     print("Valed andmed")
 
 #Ülesanne 4
+# iseseisvalt 
+
+#Ülesanne 5
+# Eelnevaid teadmisi kasutades kirjuta programm, mis väljastaks:
+# kill-koll kill-koll killadi-koll kill-koll kill-koll killadi-koll kill-koll kill-koll kill-koll
+# kill-koll
+
+# Saab kasutada muutujaid. Kuva iga sõna suure tähega.
+a="Kill-koll"
+b="Killadi-koll"
+print(a.upper() * 3 + b.upper() + a.upper() * 3 + b.upper() + a.upper() * 3)
+
+
+#Ülesanne 6
+# Koosta programm, mis väljastaks järgmised laulusõnad suurte tähtedega:
+
+print("Rong see sõitis tsuhh tsuhh tsuhh,".upper())
+print("""piilupart oli rongijuht.
+Rattad tegid rat tat taa,
+rat tat taa ja tat tat taa.
+Aga seal rongi peal,
+kas sa tead, kes olid seal?
+
+Rong see sõitis tuut tuut tuut,
+piilupart oli rongijuht.
+Rattad tegid kill koll koll,
+kill koll koll ja kill koll kill.""".upper())
+
+
+
+#....Sisend, väljund, tingimus....
