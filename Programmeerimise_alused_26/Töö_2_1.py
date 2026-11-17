@@ -95,3 +95,97 @@ try:
         print("Remonti ei tehta!")
 except ValueError:
     print("Viga: kasuta numbreid pikkuse ja laiuse sisestamiseks")
+
+# 4. Allahindlus
+# Küsi toote alghind. Kui alghind on üle 700 euro, arvuta hind 30% soodustusega. 
+# Muul juhul jääb hind samaks. Kuva lõplik hind kahe komakohaga.
+try:
+    alghind=float(input("Sisesta algushind: "))
+    if alghind>=700:
+        hind=alghind*0.7
+        print(f"Hind on {hind}")
+    elif 0<alghind<700:
+        hind=alghind
+        print(f"Hind on {hind}")
+    else:
+        print("Töötan ainult positiivsete andmetega")
+    
+except ValueError:
+    print("On vaja arv")
+
+# 5. Temperatuur
+# Küsi toatemperatuur ja teata, kas see on üle 18 kraadi 
+# (soovitatav toasoojus talvel). 
+# Temperatuur võib olla ka negatiivne või kümnendarv, 
+# seega kontrolli sisendit try/except abil.
+
+
+# 6. Pikkus
+# Küsi inimese pikkus sentimeetrites ja teata, kas ta on lühike, 
+# keskmise pikkusega või pikk. 
+# Piirid pane ise paika ja kirjuta need programmi alguses kommentaarina.
+
+
+# 7. Pikkus ja sugu
+# Täienda ülesannet 6: küsi lisaks sugu. 
+# Meestele ja naistele kehtivad erinevad piirid. 
+# Tingimusplokid võivad olla üksteise sees.
+
+# Sugu võib sisestada mis tahes kujul (M, m, mees, MEES). 
+# Programm peab selle ära tundma.
+# Kui sugu on sisestatud valesti, kuva veateade.
+# Kasuta: pesastatud if-laused, lower()
+
+# 8. Poes
+# Küsi kasutajalt iga toote kohta eraldi, kas ta soovib seda osta: 
+#     piim, sai, leib ja vähemalt kaks toodet veel.
+# Toodete hinnad loo juhuslikult moodulist random, näiteks round(random.uniform(0.5, 3), 2).
+# Kui kasutaja soovib toodet osta, küsi kogus. Kontrolli, et kogus on täisarv (isdigit()).
+# Lõpus kuva tšekk: iga ostetud toote nimi, kogus, hind ja summa ning kõige all kogusumma.
+# ilma tsüklita ja listita
+from random import *
+summa=0
+arve="Toode   Kogus   Hind    Kokku\n"
+valik=input("Kas soovid osta piima? (jah/ei): ")
+if valik.lower()=="jah":
+    kogus=input("Kui palju piima soovid osta (täisarv): ")
+    if kogus.isdigit():
+        kogus=int(kogus)
+        piim_hind=round(uniform(0.5, 3), 2)
+        print(f"Piima hind on {piim_hind} eurot.")
+        summa+=round(kogus*piim_hind,2)
+        print(f"Piima kogusumma on {summa} eurot.")
+        arve+=f"piim   {kogus}   {piim_hind}€    {kogus*piim_hind}€\n"
+    else:
+        print("Viga: vale hind!")
+else:
+    print("Selge: Piima ei taha")
+print(f"Kogusumma on:{summa} eurot.")
+
+
+valik=input("Kas soovid osta sai? (jah/ei): ")
+if valik.lower()=="jah":
+    kogus=input("Kui palju sai soovid osta (täisarv): ")
+    if kogus.isdigit():
+        kogus=int(kogus)
+        sai_hind=round(uniform(0.5, 3), 2)
+        print(f"Sai hind on {sai_hind} eurot.")
+        summa+=round(kogus*sai_hind,2)
+        print(f"Sai kogusumma on {round(kogus*sai_hind,2)} eurot.")
+        arve+=f"sai   {kogus}   {sai_hind}€    {round(kogus*sai_hind,2)}€\n"
+print(f"Kogusumma on:{summa} eurot.")
+valik=input("Kas soovid osta leiba? (jah/ei): ")
+if valik.lower()=="jah":
+    kogus=input("Kui palju leiba soovid osta (täisarv): ")
+    if kogus.isdigit():
+        kogus=int(kogus)
+        leib_hind=round(uniform(0.5, 3), 2)
+        print(f"Leiva hind on {round(leib_hind,2)} eurot.")
+        summa+=kogus*leib_hind
+        print(f"Leiva kogusumma on {round(kogus*leib_hind,2)} eurot.")
+        arve+=f"leib   {kogus}   {round(leib_hind,2)}€    {round(kogus*leib_hind,2)}€\n"
+print(f"Kogusumma on:{round(summa,2)} eurot.")
+# Lõpus kuva tšekk: iga ostetud toote nimi, kogus, hind ja summa ning kõige all kogusumma.
+print("Arve NR: 0000")
+print("--------------")
+print(arve)
