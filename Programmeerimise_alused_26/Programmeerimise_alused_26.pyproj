@@ -21,9 +21,9 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Teema1_Lin_programmid.py" />
-    <Compile Include="Teema2_Valikud.py" />
-    <Compile Include="Teema_3_Valikud.py" />
+    <Compile Include="Teema_1_Lin_programmid.py" />
+    <Compile Include="Teema_2_Valikud.py" />
+    <Compile Include="Teema_3_Kordused.py" />
     <Compile Include="Too_1_1.py" />
     <Compile Include="Too_1_3.py" />
     <Compile Include="Töö_2_1.py" />
